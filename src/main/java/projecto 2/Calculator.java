@@ -9,7 +9,7 @@ import javax.inject.Named;
 @SessionScoped
 public class Operation implements Serializable{
 	private static final long serialVersionUID = 1L;
-	
+			private String message = "Welcome to my calculator";
 			private double operador1;
 			private double operador2;
 			private double resultado;
