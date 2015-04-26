@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+   <title>Calculator: <ui:insert name="title">Calculadora Padrão</ui:insert></title>
+		<h:outputStylesheet library="css" name="style.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</h:head>
+
+<h:body>
+<div id="page">
+<div id="header">
+	<h1>CALCULADORA PADRÃO</h1>
+
+</div>	
+<div id="container">
+   <ui:insert name="content">#{calculator.message}</ui:insert>
+    
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"> 
+<!-- 	 <div id="cal-container"> -->
+	
+		
+	<table style="width:100%">
+	  <tr>
+    <th colspan="5"><h2>Padrão</h2></th> 
+    <!--  h:commandlink para ir para outra página-->
+    <!--  h:selectOneRadio-->		
+  </tr>
+  <tr>
+    <th colspan="5"><input class="input-box" id="syntax"  type="text" value=""></input></th>
+  		
+  </tr>
+  <tr>
+    <td><button id="BtnM" class="btns-lf">M</button></td>
+    <td><button id="BtnCE" class="btns">CE</button></td>
+	<td><button id="BtnC" class="btns">C</button></td>
+	<td><button id="Btn5" class="btns">?</button></td>
+	<td><button id="Btn/" class="btns">/</button></td>		
+  </tr>
+ <tr>    
+ 	<td><button id="BtnPM" class="btns-lf">+-</button></td>
+    <td><button id="Btn7" class="btns">7</button></td>
+	<td><button id="Btn8" class="btns">8</button></td>
+	<td><button id="Btn9" class="btns">9</button></td>
+	<td><button id="BtnX" class="btns">*</button></td>	   
+  </tr>
+   <tr>    
+ 	<td><button id="BtnMS" class="btns-lf">RQ</button></td>
+    <td><button id="Btn7" class="btns">4</button></td>
+	<td><button id="Btn8" class="btns">5</button></td>
+	<td><button id="Btn9" class="btns">6</button></td>
+	<td><button id="BtnX" class="btns">-</button></td>	 
+  </tr>
+     <tr>    
+ 	<td><button id="BtnP" class="btns-lf">%</button></td>
+    <td><button id="Btn7" class="btns">1</button></td>
+	<td><button id="Btn8" class="btns">2</button></td>
+	<td><button id="Btn9" class="btns">3</button></td>
+	<td><button id="BtnX" class="btns">+</button></td>	 
+  </tr>
+       <tr>    
+ 	<td><button id="BtnF" class="btns-lf">1/x</button></td>
+    <td><button id="Btn7" class="btns">0</button></td>
+	<td><button id="Btn8" class="btns">.</button></td>
+	<td colspan="2"><button id="Btn9" class="btns-equal">=</button></td>
+  </tr>
+  
+  
+  
+	  </table>
+	
+			</div>
+ 
+
+<div class="col-md-3"></div>
+</div>
+
+
+
+
+	<!--  -->
+	</div>
+</div>
+</h:body>
+</html>
