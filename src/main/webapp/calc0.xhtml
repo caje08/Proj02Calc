@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+   <title>Calculator: <ui:insert name="title">Calculadora Padrão</ui:insert></title>
+		<h:outputStylesheet library="css" name="style.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</h:head>
+
+<h:body>
+<div id="page">
+<div id="header">
+	<h1>CALCULADORA PADRÃO</h1>
+
+</div>	
+
+<div id="container">
+
+   <ui:insert name="content">#{calculator.message}</ui:insert>
+    
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"> 
+	<h:form>
+	 <h:commandLink value="Padrão" />
+	  <h:commandLink value="Científica" />
+	 <h:panelGrid id="panel" columns="5" border="1"
+         cellpadding="10" cellspacing="1">
+	<f:facet name="header">
+	<h:inputText  class="input-box"/>
+	</f:facet>
+		<h:commandButton class="btns-lf" id="M" value="M"  actionListener="#{calculator.key}"/>
+		<h:commandButton class="btns" id="CE" value="CE"  actionListener="#{calculator.key}"/> 	
+     	<h:commandButton class="btns" id="C" value="C"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="X" value="X"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="divide" value="/"  actionListener="#{calculator.key}"/>
+     	
+		<h:commandButton class="btns-lf" id="plusminus" value="+/-"  actionListener="#{calculator.key}"/>
+		<h:commandButton class="btns" id="number7" value="7"  actionListener="#{calculator.key}"/> 	
+     	<h:commandButton class="btns" id="number8" value="8"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="number9" value="9"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="multiply" value="*"  actionListener="#{calculator.key}"/>
+		
+		<h:commandButton class="btns-lf" id="square" value="rq"  actionListener="#{calculator.key}"/>
+		<h:commandButton class="btns" id="number4" value="4"  actionListener="#{calculator.key}"/> 	
+     	<h:commandButton class="btns" id="number5" value="5"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="number6" value="6"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="minus" value="-"  actionListener="#{calculator.key}"/>
+
+		<h:commandButton class="btns-lf" id="percentagem" value="%"  actionListener="#{calculator.key}"/>
+		<h:commandButton class="btns" id="number1" value="1"  actionListener="#{calculator.key}"/> 	
+     	<h:commandButton class="btns" id="number2" value="2"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="number3" value="3"  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="plus" value="+"  actionListener="#{calculator.key}"/>
+     	
+     	<h:commandButton class="btns-lf" id="fraction" value="1/x"  actionListener="#{calculator.key}"/>
+		<h:commandButton class="btns" id="number0" value="0"  actionListener="#{calculator.key}"/> 	
+     	<h:commandButton class="btns" id="point" value="."  actionListener="#{calculator.key}"/>
+     	<h:commandButton class="btns" id="equal" value="="  actionListener="#{calculator.key}"/>
+     
+  </h:panelGrid>
+  </h:form>
+  
+	  
+	
+			</div>
+ 
+
+<div class="col-md-3"></div>
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+</h:body>
+</html>
